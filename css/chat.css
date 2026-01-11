@@ -1,0 +1,78 @@
+/* =====================================
+   CHAT VIEW (DM)
+   ===================================== */
+
+.chat-container {
+  height: calc(100% - var(--input-height));
+  overflow-y: auto;
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/* ---------- Message Bubble ---------- */
+
+.message {
+  max-width: 75%;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-md);
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.message.incoming {
+  align-self: flex-start;
+  background-color: var(--gray-800);
+}
+
+.message.outgoing {
+  align-self: flex-end;
+  background-color: var(--primary-blue);
+}
+
+/* ---------- Reel Message ---------- */
+
+.reel-message {
+  width: 160px;
+  height: 220px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: var(--gray-900);
+  position: relative;
+  cursor: pointer;
+}
+
+.reel-message video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.6)
+  );
+}
+
+/* ---------- Input Bar ---------- */
+
+.chat-input-bar {
+  height: var(--input-height);
+  border-top: 1px solid var(--gray-700);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-md);
+  gap: var(--space-sm);
+}
+
+.chat-input-bar input {
+  flex: 1;
+  font-size: var(--font-md);
+  color: var(--gray-400);
+}

@@ -1,0 +1,39 @@
+/* =====================================
+   ANIMATIONS & TRANSITIONS
+   ===================================== */
+
+/* Fade + slide for view transitions */
+.view-enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.view-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity var(--normal) var(--ease-standard),
+              transform var(--normal) var(--ease-standard);
+}
+
+.view-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.view-exit-active {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity var(--fast) var(--ease-standard),
+              transform var(--fast) var(--ease-standard);
+}
+
+/* Tap feedback */
+.reel-message:active {
+  transform: scale(0.97);
+  transition: transform var(--fast) var(--ease-standard);
+}
+
+/* Smooth scroll */
+.reel-stack-container {
+  scroll-behavior: smooth;
+}

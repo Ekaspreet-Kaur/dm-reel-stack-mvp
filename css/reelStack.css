@@ -1,0 +1,83 @@
+/* =====================================
+   REEL STACK VIEW (DM CONTEXT)
+   ===================================== */
+
+.reel-stack-container {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+/* ---------- Individual Reel ---------- */
+
+.reel {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  scroll-snap-align: start;
+  background-color: var(--black);
+}
+
+.reel video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.reel-creator {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* ---------- Overlay UI ---------- */
+
+.reel-ui {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-lg);
+  pointer-events: none;
+}
+
+/* Left side (caption / context) */
+.reel-ui-left {
+  align-self: flex-end;
+  max-width: 70%;
+}
+
+.reel-caption {
+  font-size: var(--font-md);
+  line-height: 1.4;
+  margin-bottom: var(--space-sm);
+}
+
+/* Right side (actions) */
+.reel-ui-right {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.reel-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--font-sm);
+}
+
+/* ---------- Exit Hint ---------- */
+
+.reel-exit-hint {
+  position: absolute;
+  top: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: var(--font-sm);
+  color: var(--gray-400);
+  opacity: 0.8;
+}
