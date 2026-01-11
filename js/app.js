@@ -14,3 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+const moreBtn = document.querySelector(".header-right img");
+const aboutModal = document.getElementById("aboutModal");
+const closeAbout = document.getElementById("closeAbout");
+
+moreBtn.addEventListener("click", () => {
+  aboutModal.classList.remove("hidden");
+});
+
+closeAbout.addEventListener("click", () => {
+  aboutModal.classList.add("hidden");
+});

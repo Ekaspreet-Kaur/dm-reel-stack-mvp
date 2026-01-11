@@ -87,3 +87,30 @@
 .hidden {
   display: none !important;
 }
+.about-modal {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.about-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 300px;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+.about-card h2 {
+  margin-bottom: 10px;
+}
+
+.about-card button {
+  margin-top: 15px;
+  color: var(--primary-blue);
+}
