@@ -1,6 +1,6 @@
 DM Reel Stack – MVP
 Live Demo
-dm-reel-stack-mvp.vercel.app
+[Click here to try]dm-reel-stack-mvp.vercel.app
 
 A context-aware Reel consumption experience where Instagram Reels shared in Direct Messages (DMs) play sequentially inside the chat, instead of redirecting users to the global Reels feed.
 This MVP demonstrates how a small UX shift can significantly improve conversation continuity, engagement, and social intent.
