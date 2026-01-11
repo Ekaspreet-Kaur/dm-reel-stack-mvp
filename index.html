@@ -28,27 +28,14 @@
         </div>
 
         <div class="header-right">
-          <img src="./assets/icons/more.svg" class="icon">
+          <img src="./assets/icons/more.svg" class="icon" id="moreBtn">
         </div>
       </header>
-    <div id="aboutModal" class="about-modal hidden">
-  <div class="about-card">
-    <h2>DM Flow</h2>
-    <p>
-      DM Flow lets you watch Reels shared in a chat one after another,
-      without leaving the conversation.
-    </p>
-    <p>
-      Instead of opening the global Reels feed, you stay inside the chat
-      and watch only what your friend sent — in order.
-    </p>
-    <button id="closeAbout">Close</button>
-  </div>
-</div>
 
       <!-- MAIN -->
       <main id="mainView">
 
+        <!-- CHAT VIEW -->
         <section id="chatView" class="view active">
           <div class="chat-container" id="chatContainer"></div>
 
@@ -58,9 +45,26 @@
           </div>
         </section>
 
+        <!-- REEL STACK VIEW -->
         <section id="reelStackView" class="view hidden">
           <div class="reel-stack-container" id="reelStackContainer"></div>
         </section>
+
+        <!-- ABOUT MODAL -->
+        <div id="aboutModal" class="about-modal hidden">
+          <div class="about-card">
+            <h2>DM Flow</h2>
+            <p>
+              DM Flow lets you watch Reels shared in a chat one after another,
+              without leaving the conversation.
+            </p>
+            <p>
+              Instead of opening the global Reels feed, you stay inside the chat
+              and watch only what your friend sent — in order.
+            </p>
+            <button id="closeAbout">Close</button>
+          </div>
+        </div>
 
       </main>
 
@@ -68,6 +72,7 @@
 
   </div>
 
+  <!-- JAVASCRIPT -->
   <script src="./js/data.js"></script>
   <script src="./js/state.js"></script>
   <script src="./js/router.js"></script>
