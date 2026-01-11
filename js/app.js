@@ -13,15 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll("video").forEach(v => v.pause());
     }
   });
-});
-const moreBtn = document.querySelector(".header-right img");
-const aboutModal = document.getElementById("aboutModal");
-const closeAbout = document.getElementById("closeAbout");
 
-moreBtn.addEventListener("click", () => {
-  aboutModal.classList.remove("hidden");
-});
+  // About modal wiring
+  const moreBtn = document.querySelector(".header-right img");
+  const aboutModal = document.getElementById("aboutModal");
+  const closeAbout = document.getElementById("closeAbout");
 
-closeAbout.addEventListener("click", () => {
-  aboutModal.classList.add("hidden");
+  moreBtn.addEventListener("click", () => {
+    aboutModal.classList.remove("hidden");
+  });
+
+  closeAbout.addEventListener("click", () => {
+    aboutModal.classList.add("hidden");
+  });
 });
